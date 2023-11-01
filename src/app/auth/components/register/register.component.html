@@ -1,0 +1,19 @@
+<div class="login-page">
+    <a routerLink="/">
+        <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/70a4be81077a8037698067f583816ff9.svg"
+            class="trello-main-logo" />
+    </a>
+    <div class="form-container">
+        <div class="login-header">Tạo hồ sơ</div>
+        <div class="errors" *ngIf="errorMessage">{{ errorMessage }}</div>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <input formControlName="email" type="email" placeholder="Email" class="login-input" />
+            <input formControlName="username" placeholder="Username" class="login-input" />
+            <input formControlName="password" type="password" placeholder="Password" class="login-input" />
+            <button type="submit" class="login-submit-button">Tạo tài khoản</button>
+        </form>
+        <div class="bottom-form-links">
+            <a routerLink="/login" class="register-link">Đăng nhập</a>
+        </div>
+    </div>
+</div>
