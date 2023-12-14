@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <div class="home-header-left">
+        <a routerLink="/" class="home-header-home-link">
+            <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/70a4be81077a8037698067f583816ff9.svg" />
+        </a>
+    </div>
+    <div class="home-header-right">
+        <a routerLink="/login" class="home-header-login">Đăng nhập</a>
+        <a routerLink="/register" class="home-header-register">Tạo hồ sơ</a>
+    </div>
+</header>
+<section class="hero">
+    <h1>Courses</h1>
+    <p>Choose from over 30 languages and start learning today!</p>
+</section>
+
+<body>
+    <div *ngFor="let course of courses">
+        <div class="course-box">
+            <h2>{{course.title}}</h2>
+            <h2>Parts: {{course.parts.length}}</h2>
+        </div>
+    </div>
+
+
+</body>
+
+<footer>
+    <p>&copy; 2023 Duolingo. All rights reserved.</p>
+</footer>
+
+
+</html>
